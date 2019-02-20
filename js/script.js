@@ -18,6 +18,10 @@ $(document).ready(function() {
 function renderLevel(level) {
     $("#prompt").text(level.message);
     $("#choices").empty();
+    
+    if (level.foo){
+        level.foo();
+    }
 
     var choices = level.choices;
     if (choices) {
